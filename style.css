@@ -1,93 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.overall{
-  background-color: #e0f2f1;
+body {
+  font-family: Arial, sans-serif;
+  background: #e6eff6;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-/* Top section */
-.card-1{
-  background-color: white;
+
+/* CARD */
+.wrapper {
+  width: 720px;
+  background: white;
   border-radius: 10px;
-  width: 550px;
-   display: grid;
-  
-}
-.top-section{
-  padding: 32px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.top-section h2{
-  color: #009688;
+/* TOP */
+.top {
+  padding: 40px;
 }
 
-.guarantee {
-  color: #cddc39;
+.top h1 {
+  color: #2ab2af;
+  margin-bottom: 15px;
 }
 
-.description {
-  color: #7b879d;
-  line-height: 1.5;
+.top h2 {
+  color: #c0df34;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
-/* Bottom section */
-.card-2{
-  display: grid;
-  grid-template-columns: 1fr;
+.top p {
+  color: #98a6bd;
+  line-height: 1.6;
 }
 
-.subscription{
-  padding: 32px;
+/* BOTTOM */
+.bottom {
+  display: flex;
+}
+
+/* LEFT */
+.subscription {
+  background: #2ab2af;
   color: white;
-   background-color: #009688;
+  padding: 35px;
+  width: 50%;
+}
+
+.subscription h3 {
+  margin-bottom: 15px;
 }
 
 .price {
-  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0.9;
 }
 
 .price span {
   font-size: 32px;
+  font-weight: bold;
 }
 
+.access {
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
 
-.subscription button {
-  background-color: #cddc39;
-  color: #333;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  height: 50px; 
-  cursor: pointer;
+button {
   width: 100%;
-}
-/* bottom left card-3 */
-.card-3 {
-  padding: 32px;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #c0df34;
   color: white;
-  background-color: #26a69a;
-   display: grid;
-  grid-template-columns: 1fr;
-
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.card-3  h3 {
-  margin-bottom: 16px;
+button:hover {
+  opacity: 0.9;
 }
 
-.card-3  ul {
+/* RIGHT */
+.why-us {
+  background: #4bbfbd;
+  color: white;
+  padding: 35px;
+  width: 50%;
+}
+
+.why-us h3 {
+  margin-bottom: 15px;
+}
+
+.why-us ul {
   list-style: none;
+  font-size: 14px;
+  opacity: 0.9;
 }
 
-.card-3  li {
-  line-height: 1.8;
-  color: #e0f2f1;
+.why-us li {
+  margin-bottom: 6px;
 }
 
-/* Responsive layout */
-@media (min-width: 375px) {
-  .card-2 {
-    /* flex-direction: row; */
-     grid-template-columns: 1fr 1fr;
+/* MOBILE */
+@media (max-width: 375px) {
+  .wrapper {
+    width: 90%;
   }
 
+  .bottom {
+    flex-direction: column;
+  }
+
+  .subscription,
+  .why-us {
+    width: 100%;
+  }
 }
